@@ -63,7 +63,7 @@ Bootsoft guide to CSS / LESS / SCSS {
   In vanilla CSS the practice of adding speceficity to a rule can be handled be including parent class names.  In CSS pre-processors a developer may nest style declarations such that the compiled CSS will prepend the parent class to the rule, thereby elimnating the repetition of parent class names.
 
   ```css
-  //Vanilla CSS
+  /*Vanilla CSS*/
   .my-class {
     color : '#000';
   }
@@ -151,7 +151,7 @@ Bootsoft guide to CSS / LESS / SCSS {
 
 (The MIT License)
 
-Copyright (c) 2014 Airbnb
+Copyright (c) 2014 Bootsoft
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -174,4 +174,4 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 **[⬆ back to top](#table-of-contents)**
 
-# };
+# }
