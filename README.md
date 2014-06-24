@@ -9,6 +9,7 @@ Bootsoft guide to CSS / LESS / SCSS {
   1. [Formatting](#formatting)
   1. [Nesting](#nesting)
   1. [Font Sizing](#font-sizing)
+  1. [Specificity](#specificity)
   1. [License](#license)
 
 ## Spacing
@@ -33,6 +34,25 @@ Bootsoft guide to CSS / LESS / SCSS {
   - Use `//` for comments in LESS / SCSS instead of /**/
   - Avoid specifying units for zero values, e.g., `margin: 0;` instead of `margin: 0px;`.
   - Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values.
+  - Class and ID names should be hyphenated
+
+  **Example**
+  ```scss
+
+  .callout-panel {
+  	margin : 10px;
+  }
+
+  .homepage aside {
+  	padding : 10px;
+
+	//Callout Panel Override
+  	.callout-panel {
+	  margin-bottom : 0px;
+	  background-color : hsla(120, 45, 45, .5);
+  	}
+  }
+  ```
 
 
 **[⬆ back to top](#table-of-contents)**
@@ -105,6 +125,27 @@ Bootsoft guide to CSS / LESS / SCSS {
   }
   ```
 
+
+## Specificity
+
+  - The least specific selector is the tag name `div` for example, it is very useful for targeting specific elemtents who share the same semantic class as other elements.  It should not be assumed to always preface a class or ID selector as a general class will often be "good enough", and there is no reason to over specifiy.
+  - Use the CSS cascade to your advantage to promote clean and less bloated code.  If there is no reason to add specificity to a rule, do not it.
+  - In general class names are prefered to IDs for styling.  This is because generally classes styles are to be re-used, and as we all know mutiples of and ID is not allowed.
+  - The use of `!important` should ONLY be used in extreme situations. It should not be used ever if the developer can use classes and or IDs to better targe the element.
+
+  ```scss
+
+  //bad
+  a#back-link.back-link {
+    color : 'red' !important;
+  }
+
+  /good
+  .back-link {
+  	color : 'red';
+  }
+  ```
+  Extra specificty in CSS will make it harder to maintain, debug, and extend.
 
 ## License
 
