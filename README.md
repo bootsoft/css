@@ -140,7 +140,7 @@ Bootsoft guide to CSS / LESS / SCSS {
     color : 'red' !important;
   }
 
-  /good
+  //good
   .back-link {
   	color : 'red';
   }
