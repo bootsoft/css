@@ -1,4 +1,4 @@
-Bootsoft guide to CSS / LESS / SCSS {
+# Modus guide to CSS / LESS / SCSS {
 
 *A Code Style Guide to CSS*
 
